@@ -1,0 +1,12 @@
+<h1>プロフィールの編集</h1>
+
+<div class="form-horizontal" role="form">
+<%= form_for(@user) do |f| %>
+  地域
+  <%= f.text_field :region, :class => "form-control" %>
+  プロフィール
+  <%= f.text_area :profile, :class => "form-control", :cols => "40", :rows => "5" %>
+
+  <%= f.submit "Save changes", class: "btn btn-sm btn-primary" %>
+<% end %>
+</div>
