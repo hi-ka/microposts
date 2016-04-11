@@ -4,24 +4,19 @@
 </h1>
 
 <div class="panel panel-default">
-
   <div class="panel-body">
-    <% @users.each do |user| %>
+   
       地域:
-      <%= user.region %>
-      </br>
-      プロフィール:
-      <%= user.profile %>
-      <% if current_user.id == @user.id %>
-        <div>
-          <%= link_to "edit" , edit_user_path(current_user.id) %>
-        </div>
-      <% end %>
+      <%= @user.region %>
       <br>
-    <% end %>
+      プロフィール:
+      <%= @user.profile %>
+      <br>
+      <%= link_to "edit" , edit_user_path(@user) %>
+
   </div>
 </div>
-
+ 
 
     
   
