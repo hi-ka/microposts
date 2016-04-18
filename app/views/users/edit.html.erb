@@ -2,18 +2,19 @@
 
 <div class="form-horizontal" role="form">
 <%= form_for(@user) do |f| %>
-  名前
-  <%= f.text_field :name, :class => "form-control" %>
-  メールアドレス
-  <%= f.email_field :email, :class => "form-control" %>
-  パスワード
-  <%= f.password_field :password, :class => "form-control" %>
-  パスワード（確認用）
-  <%= f.password_field :password_confirmation, :class => "form-control" %>
-  地域
-  <%= f.text_field :region, :class => "form-control" %>
-  プロフィール
-  <%= f.text_area :profile, :class => "form-control", :cols => "40", :rows => "5" %>
+  <%= render 'shared/error_messages', object: f.object %>
+    名前
+    <%= f.text_field :name, :class => "form-control" %>
+    メールアドレス
+    <%= f.email_field :email, :class => "form-control" %>
+    パスワード
+    <%= f.password_field :password, :class => "form-control" %>
+    パスワード（確認用）
+    <%= f.password_field :password_confirmation, :class => "form-control" %>
+    地域
+    <%= f.text_field :region, :class => "form-control" %>
+    プロフィール
+    <%= f.text_area :profile, :class => "form-control", :cols => "40", :rows => "5" %>
 
   <%= f.submit "Save changes", class: "btn btn-sm btn-primary" %>
 <% end %>
